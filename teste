@@ -1,0 +1,58 @@
+       <!-- #region 
+          <th>dependente</th>
+        <th>Curso</th>
+        <th>Cidade</th>
+          <th>Curso</th>
+        <th>outros</th>
+        <th>Trabalho</th>
+        <th>extensao</th>
+        <th>Especealidade</th>
+        <th>Licenciatura</th>
+    -->
+    <td><?= $row['nome_dependente'] ?></td>
+      <td><?=$row['codcurso'] ?></td>
+        <td><?= $row['outros'] ?></td>
+        <td><?= $row['trabalho_publicado'] ?></td>
+        <td><?= $row['curso_extensao'] ?></td>
+        <td><?= $row['especealidade'] ?></td>
+        <td><?= $row['licenciatura'] ?></td>
+        <td><?= $row['codrelatorio'] ?></td>
+        <td><?=$row['codhistorico_escola'] ?></td>
+      
+
+
+
+      
+       
+       
+      
+
+        <tr>
+
+        <?php
+//unset($_SESSION["usuario"]);
+//unset($_SESSION["gmail"]);
+//session_destroy();
+  if (empty($_SESSION)) {
+         # code...
+         print" <script>location.href='../index.php'</script>";
+     }
+
+?>
+
+<div class="container">
+        <div class="topbar">
+        <div class="logo">
+            <h2><a href="dasboard.php">University ITLS</a></h2>
+        </div>
+        <div class="search">
+            <input type="search" id="search" placeholder="search here">
+        <label for="search"><i class='bx bx-search'></i>
+        </div>
+     
+        <div class="user">
+            <img width="40px" src="img/images.jpeg" alt="">
+        </div>
+        <span><?php print $_SESSION["usuario"]; ?></span>
+    </div>
+ 
